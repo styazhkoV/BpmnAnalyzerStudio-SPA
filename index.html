@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AnalystPad — инструмент для бизнес- и системных аналитиков: BPMN-моделирование, валидация схемы и подготовка черновика технического задания."
+    />
+    <title>AnalystPad — BPMN → ТЗ для аналитиков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="AnalystPad home">
+          <span class="brand-mark">◈</span>
+          <span class="brand-text">AnalystPad</span>
+          <span class="brand-subtitle">BPMN → ТЗ для аналитиков</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#problem">Проблема</a>
+          <a href="#steps">Как работает</a>
+          <a href="#features">Возможности</a>
+          <a href="#privacy">Приватность</a>
+        </nav>
+
+        <a
+          class="button button-primary nav-button"
+          href="https://github.com/styazhkoV/BpmnAnalyzerStudio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">BPMN → ТЗ для аналитиков</span>
+            <h1>От BPMN-схемы — к проверенным требованиям и черновику ТЗ</h1>
+            <p class="lead">
+              AnalystPad помогает бизнес- и системным аналитикам быстро моделировать
+              процесс, проверять структуру схемы и превращать её в редактируемый текст
+              для дальнейшей работы над требованиями.
+            </p>
+
+            <div class="cta-row">
+              <a class="button button-primary" href="#features">Посмотреть возможности</a>
+              <a class="button button-secondary" href="#steps">Как это работает</a>
+            </div>
+
+            <ul class="mini-metrics" aria-label="Показатели продукта">
+              <li>
+                <strong>3 шага</strong>
+                <span>от модели до документа</span>
+              </li>
+              <li>
+                <strong>локально</strong>
+                <span>проекты хранятся на устройстве</span>
+              </li>
+              <li>
+                <strong>проверка</strong>
+                <span>структура BPMN контролируется</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-art" aria-label="Схематическая иллюстрация BPMN-процесса">
+            <div class="art-window">
+              <div class="art-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+
+              <svg viewBox="0 0 560 360" role="img" aria-labelledby="hero-illustration-title hero-illustration-desc">
+                <title id="hero-illustration-title">Пример BPMN-схемы</title>
+                <desc id="hero-illustration-desc">Иллюстрация процесса с событиями, задачами, шлюзом и завершением</desc>
+                <rect x="20" y="38" width="518" height="300" rx="18" fill="#111827" stroke="#2d3a4f"/>
+                <rect x="62" y="118" width="92" height="72" rx="16" fill="#1d4ed8" opacity="0.9"/>
+                <text x="108" y="160" text-anchor="middle" fill="#e5f0ff" font-size="18" font-weight="700">Старт</text>
+
+                <path d="M154 154 L214 154" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+                <rect x="214" y="82" width="120" height="144" rx="18" fill="#18263d" stroke="#3b82f6"/>
+                <text x="274" y="126" text-anchor="middle" fill="#dbeafe" font-size="18" font-weight="700">Задача</text>
+                <text x="274" y="165" text-anchor="middle" fill="#9bb6d6" font-size="13">Анализ</text>
+
+                <path d="M334 154 L389 154" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+                <path d="M389 154 L389 92 L450 92" stroke="#7dd3fc" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+                <path d="M389 154 L389 216 L450 216" stroke="#7dd3fc" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+                <g>
+                  <polygon points="450,92 500,154 450,216 400,154" fill="#0b2f4d" stroke="#60a5fa" stroke-width="3"/>
+                  <text x="450" y="160" text-anchor="middle" fill="#e0f2fe" font-size="18" font-weight="700">?</text>
+                </g>
+
+                <rect x="472" y="78" width="28" height="28" rx="8" fill="#22c55e" opacity="0.9"/>
+                <rect x="472" y="188" width="28" height="28" rx="8" fill="#f59e0b" opacity="0.9"/>
+
+                <path d="M500 154 L514 154" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+                <rect x="514" y="120" width="12" height="68" rx="6" fill="#cbd5e1"/>
+
+                <rect x="402" y="256" width="82" height="54" rx="16" fill="#1d4ed8" opacity="0.9"/>
+                <text x="443" y="290" text-anchor="middle" fill="#edf6ff" font-size="16" font-weight="700">Финиш</text>
+
+                <defs>
+                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#7dd3fc"/>
+                  </marker>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problem" id="problem">
+        <div class="container two-col">
+          <div>
+            <span class="section-kicker">Проблема и решение</span>
+            <h2>Между BPMN-диаграммой и документом для команды — слишком большой разрыв.</h2>
+          </div>
+          <div>
+            <p>
+              В работе аналитика процессы рисуются в BPMN, но требования и черновик ТЗ
+              часто собираются отдельно: в заметках, таблицах и переписке. AnalystPad
+              объединяет эти этапы: модель процесса, проверку корректности и формирование
+              текстового описания на основе текущей схемы.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section steps" id="steps">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Простой сценарий</span>
+            <h2>Три шага от схемы к документу</h2>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Смоделируйте или импортируйте BPMN</h3>
+              <p>Создавайте новые схемы, загружайте существующие .bpmn/.xml-файлы и редактируйте процесс в понятном интерфейсе.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Проверьте корректность</h3>
+              <p>Проверяйте стартовые и конечные события, задачи, шлюзы и структуры ветвления, чтобы не упустить ключевые ошибки.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Сформируйте текстовое описание</h3>
+              <p>На основе текущей схемы получайте черновик технического задания, списка требований или заметок для дальнейшей правки.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Возможности</span>
+            <h2>То, что уже реализовано в Desktop-версии</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>BPMN-редактор</h3>
+              <p>Работа с процессами, добавление элементов, масштабирование и экспорт схемы в SVG/PNG.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Проверка структуры</h3>
+              <p>Проверяются старт/финиш, задачи, шлюзы, связи и базовые правила ветвления и слияния.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Шаблоны документов</h3>
+              <p>Формируются техническое задание, список требований и свободные заметки по текущей схеме.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Локальные проекты</h3>
+              <p>Проекты сохраняются на устройстве в браузере, без обязательной серверной инфраструктуры.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Редактирование сущностей</h3>
+              <p>Для выбранного элемента можно изменять название и описание, а также контролировать идентификаторы.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Готовность к публикации</h3>
+              <p>Лендинг статический, адаптивный и предназначен для размещения на GitHub Pages без бэкенда.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section privacy" id="privacy">
+        <div class="container privacy-box">
+          <div>
+            <span class="section-kicker">Приватность и хранение</span>
+            <h2>Данные остаются локальными</h2>
+          </div>
+          <p>
+            Проекты и документы сохраняются локально в браузере. В текущем состоянии нет
+            облачной синхронизации, авторизации по аккаунту или серверного хранения — что
+            важно для рабочих процессов аналитики и внутреннего проектного контента.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <div class="footer-brand">AnalystPad</div>
+          <p>BPMN → ТЗ для аналитиков</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/styazhkoV/BpmnAnalyzerStudio" target="_blank" rel="noreferrer">Репозиторий</a>
+          <a href="#features">Возможности</a>
+          <a href="#top">Наверх</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
